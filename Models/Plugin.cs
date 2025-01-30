@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PluginManagerObs.Models
 {
@@ -17,8 +12,8 @@ namespace PluginManagerObs.Models
         public bool IsInstalled { get; set; }
         public long InstalledDate { get; set; }
         public int OBSPathId { get; set; }
-        [ForeignKey("OBSPathId")]
 
+        [ForeignKey("OBSPathId")]
         public virtual OBSPath OBSPath { get; set; }
     }
 }
